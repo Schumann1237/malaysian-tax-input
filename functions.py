@@ -26,7 +26,7 @@ def register_user(df):
     while True:
         user_ic = input("Enter IC Number to register: ")
         user_pass = input("Enter password to register: ")
-        if verify_user(user_ic):
+        if verify_user(user_ic, user_pass):
             new_user = pd.DataFrame({
                 "IC Number": [user_ic],
                 "Password": [user_pass],
@@ -39,7 +39,8 @@ def register_user(df):
             print("Registration successful.\n")
             break
         else:
-            print("Invalid IC Number. Format accordingly \"012345678910\" or \"012345-67-8910\"\n")
+            print("Invalid. Please make sure your IC Number is correct and your password is" \
+            "the last four digits of your IC.")
 
 def login_user(df):
     print("\nLogin\n")

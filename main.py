@@ -10,7 +10,6 @@ def main():
     elif registry_check == "Y":
         if not login_user(df):
             return
-        # continue with rest of your program for logged-in users
     else:
         print("Invalid input. Exiting program.")
 
