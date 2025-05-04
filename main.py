@@ -12,7 +12,7 @@ def main():
 
     if registryCheck.upper() == "N":
         while True:
-            print("\nRegistration\n")
+            print("USER REGISTRATION")
             user_ic = input("Enter IC Number to register: ")
             user_pass = input("Enter password to register (Last 4 digits of IC Number): ")
             if verify_user(user_ic, user_pass):
@@ -32,7 +32,7 @@ def main():
     
     elif registryCheck.upper() == "Y":
         while True:
-            print("\nLogin\n")
+            print("USER LOGIN")
             user_ic = input("Enter IC Number: ")
             user_pass = input("Enter password: ")
             if verify_user(user_ic, user_pass):
