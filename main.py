@@ -3,6 +3,7 @@ from functions import *
 
 def main():
     df = initialize_csv()
+
     registry_check = input("Are you a registered user? (Y/N): ").strip().upper()
 
     if registry_check == "N":
