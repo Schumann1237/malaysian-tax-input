@@ -7,12 +7,24 @@ def main():
     while True:
         print("MAIN MENU")
         print("===============")
-        print("\n 1. Register")
+        print("\n1. Register")
         print("2. Login")
         print("3. Exit Program")
 
         procedure = int(input("Insert Operation: "))
         if procedure == 1:
-            register_user()
+            # User already exist OR Verification failed
+            if not register_user():
+                break
+            else:
+                if not login_user():
+                    break
+                else:
+                    calculate_tax()
         elif procedure == 2:
-            login_user()
+            if not login_user():
+                break
+            else:
+                calculate_tax() 
+                
+main()
